@@ -2,6 +2,11 @@
 微信版/
 *.微信版.gif
 
+# 内置引擎与发行包（ffmpeg.exe 太大，只作为 Release 附件分发，不进仓库）
+bin/
+*.zip
+_publish/
+
 # 临时文件
 *.tmp
 _tmp/
