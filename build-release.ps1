@@ -14,7 +14,7 @@
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [Text.Encoding]::UTF8
 
-$Version   = '1.0.0'
+$Version   = '1.0.1'
 $FfmpegDir = 'D:\ffmpeg\ffmpeg-8.1.1-essentials_build\bin'
 
 # 允许命令行覆盖
@@ -34,7 +34,7 @@ Write-Host "  源目录: $Root"
 Write-Host "  输出  : $ZipPath"
 
 # --- 校验源文件 ---
-$need = @('wechat-gif-compress.ps1', '压缩微信表情包.cmd', '使用说明.md', 'LICENSE', '第三方组件说明.txt')
+$need = @('wechat-gif-compress.ps1', '压缩微信表情包.cmd', '使用说明.md', 'README.md', 'CHANGELOG.md', 'LICENSE', '第三方组件说明.txt')
 foreach ($f in $need) {
     if (-not (Test-Path -LiteralPath (Join-Path $Root $f))) { throw "缺少文件: $f" }
 }
